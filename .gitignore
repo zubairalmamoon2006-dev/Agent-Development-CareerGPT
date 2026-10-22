@@ -1,0 +1,14 @@
+# secrets — never commit
+.env
+
+# local index + logs (rebuildable / machine-local)
+chroma_db/
+logs/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# eval outputs (regenerate locally)
+eval/results/
