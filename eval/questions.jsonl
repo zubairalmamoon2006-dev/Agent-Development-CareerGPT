@@ -1,0 +1,42 @@
+{"id": "company_role_01", "category": "company_role", "query": "Which companies come for analytics internships?", "expected_tools": ["search_placement_blogs"], "must_mention": ["ExampleCorp"]}
+{"id": "company_role_02", "category": "company_role", "query": "What roles does FinCo offer?", "expected_tools": ["search_placement_blogs"], "must_mention": ["FinCo"]}
+{"id": "company_role_03", "category": "company_role", "query": "Which companies offer finance or quant roles on campus?", "expected_tools": ["search_placement_blogs"], "must_mention": ["FinCo"]}
+{"id": "company_role_04", "category": "company_role", "query": "What stipend does ExampleCorp offer for its analytics internship?", "expected_tools": ["search_placement_blogs"], "must_mention": ["ExampleCorp"]}
+{"id": "company_role_05", "category": "company_role", "query": "Which domains does FinCo usually hire for?", "expected_tools": ["search_placement_blogs"], "must_mention": ["FinCo"]}
+{"id": "company_role_06", "category": "company_role", "query": "What role does ExampleCorp hire for in analytics?", "expected_tools": ["search_placement_blogs"], "must_mention": ["data analyst"]}
+{"id": "company_role_07", "category": "company_role", "query": "Which companies visit campus for consulting roles?", "expected_tools": ["search_placement_blogs"], "must_mention": []}
+{"id": "timeline_01", "category": "timeline_process", "query": "When does shortlisting for internships usually begin?", "expected_tools": ["search_placement_blogs"], "must_mention": ["October"]}
+{"id": "timeline_02", "category": "timeline_process", "query": "What is the typical order of tests and interviews in the internship process?", "expected_tools": ["search_placement_blogs"], "must_mention": ["aptitude"]}
+{"id": "timeline_03", "category": "timeline_process", "query": "Describe FinCo's recruitment process.", "expected_tools": ["search_placement_blogs"], "must_mention": ["FinCo"]}
+{"id": "timeline_04", "category": "timeline_process", "query": "What is the general internship recruitment timeline?", "expected_tools": ["search_placement_blogs"], "must_mention": ["October"]}
+{"id": "timeline_05", "category": "timeline_process", "query": "What are the timeline patterns observed in previous years?", "expected_tools": ["search_placement_blogs"], "must_mention": []}
+{"id": "timeline_06", "category": "timeline_process", "query": "What comes after the aptitude test in the selection process?", "expected_tools": ["search_placement_blogs"], "must_mention": ["interview"]}
+{"id": "prep_01", "category": "preparation", "query": "What skills are commonly expected for analytics roles?", "expected_tools": ["search_career_booklets"], "must_mention": ["SQL"]}
+{"id": "prep_02", "category": "preparation", "query": "How should I structure my resume?", "expected_tools": ["search_career_booklets"], "must_mention": ["one page"]}
+{"id": "prep_03", "category": "preparation", "query": "How do I prepare for consulting interviews?", "expected_tools": ["search_career_booklets"], "must_mention": ["case"]}
+{"id": "prep_04", "category": "preparation", "query": "What preparation areas should I focus on for analytics roles?", "expected_tools": ["search_career_booklets"], "must_mention": ["statistics"]}
+{"id": "prep_05", "category": "preparation", "query": "What resume advice do the Career Cell booklets give?", "expected_tools": ["search_career_booklets"], "must_mention": ["one page"]}
+{"id": "prep_06", "category": "preparation", "query": "How should I practice guesstimates for consulting?", "expected_tools": ["search_career_booklets"], "must_mention": []}
+{"id": "prep_07", "category": "preparation", "query": "What technical preparation do analytics roles require?", "expected_tools": ["search_career_booklets"], "must_mention": ["Python"]}
+{"id": "project_por_01", "category": "project_por", "query": "What type of projects are commonly seen in resumes for data roles?", "expected_tools": ["search_resume_patterns"], "must_mention": ["Kaggle"]}
+{"id": "project_por_02", "category": "project_por", "query": "What kinds of projects suit a data analyst resume?", "expected_tools": ["search_resume_patterns"], "must_mention": ["dashboard"]}
+{"id": "project_por_03", "category": "project_por", "query": "Which positions of responsibility align with consulting?", "expected_tools": ["search_resume_patterns"], "must_mention": ["case competition"]}
+{"id": "project_por_04", "category": "project_por", "query": "Suggest a project that would benefit my resume for data roles.", "expected_tools": ["search_resume_patterns"], "must_mention": []}
+{"id": "project_por_05", "category": "project_por", "query": "What types of PORs are often aligned with consulting domains?", "expected_tools": ["search_resume_patterns"], "must_mention": ["coordinator"]}
+{"id": "project_por_06", "category": "project_por", "query": "What skills do data role resumes commonly show?", "expected_tools": ["search_resume_patterns"], "must_mention": ["machine learning"]}
+{"id": "policy_01", "category": "policy", "query": "What are the placement registration requirements?", "expected_tools": ["search_institute_policies"], "must_mention": ["portal"]}
+{"id": "policy_02", "category": "policy", "query": "What is the resume verification process?", "expected_tools": ["search_institute_policies"], "must_mention": ["verification"]}
+{"id": "policy_03", "category": "policy", "query": "Who verifies my resume before placements?", "expected_tools": ["search_institute_policies"], "must_mention": ["coordinator"]}
+{"id": "policy_04", "category": "policy", "query": "What must I complete on the portal before the placement deadline?", "expected_tools": ["search_institute_policies"], "must_mention": ["profile"]}
+{"id": "policy_05", "category": "policy", "query": "What are the institute rules for placement registration?", "expected_tools": ["search_institute_policies"], "must_mention": []}
+{"id": "multi_part_01", "category": "multi_part", "query": "When does shortlisting begin and what skills should I prepare for analytics roles?", "expected_tools": ["search_placement_blogs", "search_career_booklets"], "must_mention": ["October", "SQL"]}
+{"id": "multi_part_02", "category": "multi_part", "query": "Which companies offer finance roles and what projects suit data roles?", "expected_tools": ["search_placement_blogs", "search_resume_patterns"], "must_mention": ["FinCo", "Kaggle"]}
+{"id": "multi_part_03", "category": "multi_part", "query": "What role does ExampleCorp offer and what preparation do analytics roles need?", "expected_tools": ["search_placement_blogs", "search_career_booklets"], "must_mention": ["ExampleCorp", "statistics"]}
+{"id": "multi_part_04", "category": "multi_part", "query": "What PORs suit consulting and how should I prepare for consulting cases?", "expected_tools": ["search_resume_patterns", "search_career_booklets"], "must_mention": ["E-Cell", "case"]}
+{"id": "multi_part_05", "category": "multi_part", "query": "What is the internship timeline and how should I structure my resume?", "expected_tools": ["search_placement_blogs", "search_career_booklets"], "must_mention": ["October", "one page"]}
+{"id": "multi_part_06", "category": "multi_part", "query": "How do I register for placements and when does shortlisting begin?", "expected_tools": ["search_institute_policies", "search_placement_blogs"], "must_mention": ["October"]}
+{"id": "negative_01", "category": "negative", "query": "Write a poem about the Mumbai monsoon.", "expected_tools": [], "forbidden_tools": ["search_placement_blogs", "search_career_booklets", "search_resume_patterns", "search_institute_policies"], "must_mention": [], "must_not_mention": ["ExampleCorp", "FinCo"]}
+{"id": "negative_02", "category": "negative", "query": "Which company is coming tomorrow at 9 am for a test?", "expected_tools": [], "must_mention": [], "must_not_mention": ["ExampleCorp", "FinCo"]}
+{"id": "negative_03", "category": "negative", "query": "Tell me about the hostel mess menu at IIT Bombay.", "expected_tools": [], "must_mention": [], "must_not_mention": ["ExampleCorp", "FinCo"]}
+{"id": "resume_gate_01", "category": "resume_gate", "query": "Give me feedback on my resume.", "expected_tools": ["load_user_resume"], "must_mention": ["upload"]}
+{"id": "resume_gate_02", "category": "resume_gate", "query": "Suggest projects to improve my resume.", "expected_tools": ["load_user_resume"], "must_mention": ["upload"]}

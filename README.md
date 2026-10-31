@@ -10,6 +10,10 @@ tool-call logging and resume-aware dynamic prompting. Works today on dummy data.
     pytest tests                # offline checks, no API key needed
     python run_cli.py
 
+## Eval
+    python eval/run_eval.py     # score tool routing + answers against eval/questions.jsonl
+See `eval/README.md` (question schema, gold set for the data team, decision log).
+
 ## Data contract (for the data collection / indexing team)
 1. Collections (`careergpt/config.py`): `careergpt_blogs`, `careergpt_booklets`,
    `careergpt_resumes`, `careergpt_policies`.

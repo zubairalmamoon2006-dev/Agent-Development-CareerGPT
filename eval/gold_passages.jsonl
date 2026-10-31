@@ -1,0 +1,12 @@
+{"query": "which companies come for analytics internships", "collection": "blogs", "gold_ids": ["dummy-blogs-0"]}
+{"query": "what stipend does ExampleCorp offer", "collection": "blogs", "gold_ids": ["dummy-blogs-0"]}
+{"query": "when does shortlisting for internships begin", "collection": "blogs", "gold_ids": ["dummy-blogs-1"]}
+{"query": "typical order of tests and interviews", "collection": "blogs", "gold_ids": ["dummy-blogs-1", "dummy-blogs-2"]}
+{"query": "which companies offer finance or quant roles", "collection": "blogs", "gold_ids": ["dummy-blogs-2"]}
+{"query": "skills expected for analytics roles", "collection": "booklets", "gold_ids": ["dummy-booklets-0"]}
+{"query": "how should I structure my resume", "collection": "booklets", "gold_ids": ["dummy-booklets-1"]}
+{"query": "how to prepare for consulting interviews", "collection": "booklets", "gold_ids": ["dummy-booklets-2"]}
+{"query": "what projects are common in data role resumes", "collection": "resumes", "gold_ids": ["dummy-resumes-0"]}
+{"query": "which PORs align with consulting", "collection": "resumes", "gold_ids": ["dummy-resumes-1"]}
+{"query": "placement registration requirements", "collection": "policies", "gold_ids": ["dummy-policies-0"]}
+{"query": "resume verification process", "collection": "policies", "gold_ids": ["dummy-policies-1"]}
