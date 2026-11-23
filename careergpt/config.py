@@ -18,3 +18,5 @@ EMBED_MODEL = os.getenv("EMBED_MODEL", "all-MiniLM-L6-v2")
 TOP_K = int(os.getenv("TOP_K", "5"))
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 TOOL_LOG_PATH = os.getenv("TOOL_LOG_PATH", "./logs/tool_calls.jsonl")
+# Hard cap on resume text injected into the prompt (context + cost guard).
+MAX_RESUME_CHARS = int(os.getenv("MAX_RESUME_CHARS", "8000"))

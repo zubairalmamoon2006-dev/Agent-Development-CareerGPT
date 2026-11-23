@@ -28,19 +28,31 @@ def get_collection(key: str):
     )
 
 
-def upsert_passages(key: str, passages: list[dict]) -> None:
+def upsert_passages(key: str, passages: list[dict], embeddings: list | None = None) -> None:
     """Helper for the indexing team. Each passage:
     {"id": str, "text": str, "source": str, ...extra scalar metadata (year, company, domain)}
+    `embeddings` may be passed when they were produced by EMBED_MODEL (verified by ingest.py);
+    omit it and Chroma embeds the text itself.
     """
     col = get_collection(key)
     col.upsert(
         ids=[p["id"] for p in passages],
         documents=[p["text"] for p in passages],
+        embeddings=embeddings,
         metadatas=[
             {**{k: v for k, v in p.items() if k not in ("id", "text")}, "collection": key}
             for p in passages
         ],
     )
+
+
+def delete_where(key: str, where: dict) -> int:
+    """Delete matching passages (e.g. {'dummy': True}); returns how many ids matched."""
+    col = get_collection(key)
+    ids = col.get(where=where)["ids"]
+    if ids:
+        col.delete(ids=ids)
+    return len(ids)
 
 
 def search(key: str, query: str, k: int = TOP_K, where: dict | None = None) -> str:

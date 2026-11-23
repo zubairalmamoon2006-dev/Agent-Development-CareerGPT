@@ -167,6 +167,13 @@ def build_fake_agent():
             return self
 
         def _generate(self, messages, stop=None, run_manager=None, **kwargs):
+            last = messages[-1]
+            last_text = last.content if isinstance(getattr(last, "content", None), str) else ""
+            if "did not cite any source" in last_text:
+                # respond to the grounding nudge like a real model: rewrite, no new tool call
+                msg = AIMessage(content="ExampleCorp offers a Data Analyst Intern role "
+                                        "(source=placement_blog_2025).")
+                return ChatResult(generations=[ChatGeneration(message=msg)])
             if self.step == 0:
                 self.step = 1
                 msg = AIMessage(content="", tool_calls=[{

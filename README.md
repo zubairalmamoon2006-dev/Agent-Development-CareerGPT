@@ -25,6 +25,13 @@ See `eval/README.md` (question schema, gold set for the data team, decision log)
    scalar metadata (`year`, `company`, `domain`). `collection` is added automatically.
 5. Resumes must be anonymized BEFORE indexing.
 
+## Ingesting data-team exports
+    python ingest.py <export.json> --collection booklets [--replace-dummy] [--re-embed]
+`ingest.py` reads the data team's JSON export (`{records: [{id, document, metadata, embedding}]}`),
+adds a readable `source` label, optionally wipes `dummy=True` placeholder rows first, and
+reuses their embeddings **only after verifying they match `EMBED_MODEL`** (re-embeds otherwise).
+`--replace-dummy` before each real-data import so placeholders never mix with real rows.
+
 ## Layout
 - `careergpt/store.py` Chroma access, only file touching the DB
 - `careergpt/tools.py` 5 tools (docstrings = routing)

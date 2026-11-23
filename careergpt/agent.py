@@ -1,9 +1,11 @@
 from langchain.agents import create_agent
+from langchain.agents.middleware import ModelRetryMiddleware
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.checkpoint.memory import InMemorySaver
 
 from .config import GEMINI_MODEL
-from .middleware import CareerStateMiddleware, log_tool_calls, resume_aware_prompt
+from .middleware import (CareerStateMiddleware, grounding_check, log_tool_calls,
+                         resume_aware_prompt)
 from .prompts import BASE_PROMPT
 from .tools import ALL_TOOLS
 
@@ -16,6 +18,8 @@ def build_agent(model=None):
         model=model,
         tools=ALL_TOOLS,
         system_prompt=BASE_PROMPT,  # overridden per step by resume_aware_prompt
-        middleware=[CareerStateMiddleware(), resume_aware_prompt, log_tool_calls],
+        middleware=[CareerStateMiddleware(), resume_aware_prompt,
+                    ModelRetryMiddleware(),  # exponential backoff on transient model errors
+                    log_tool_calls, grounding_check],
         checkpointer=InMemorySaver(),  # per-session memory via thread_id
     )
