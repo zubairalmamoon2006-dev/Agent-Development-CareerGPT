@@ -20,11 +20,36 @@ from careergpt import store
 
 
 def load_records(path: str) -> list[dict]:
-    data = json.load(open(path, encoding="utf-8"))
-    records = data["records"] if isinstance(data, dict) else data
+    """Accepts both formats the data team sends:
+    - .json  : {"records": [{id, document, metadata, embedding}]} (booklet exports)
+    - .jsonl : one record per line, {id, text, metadata: {...}, ...top-level fields}
+               (resume exports) — may omit `embedding` (we embed locally then).
+    """
+    if path.endswith(".jsonl"):
+        records = [json.loads(line) for line in open(path, encoding="utf-8") if line.strip()]
+        records = [_flatten(r) for r in records]
+    else:
+        data = json.load(open(path, encoding="utf-8"))
+        records = data["records"] if isinstance(data, dict) else data
     for r in records:
         assert r.get("id") and r.get("document"), f"record missing id/document: {r.get('id')}"
     return records
+
+
+def _flatten(rec: dict) -> dict:
+    """JSONL resume record -> booklet-style flat record:
+    nested `metadata` dict + top-level scalars (source, year, company, ...)
+    are merged into one metadata block; `text` becomes `document`."""
+    nested = rec.get("metadata") or {}
+    flat = {k: v for k, v in rec.items()
+            if k not in ("metadata", "text", "document", "embedding", "id")}
+    merged = {**flat, **nested}          # nested wins on key collision
+    out = {"id": rec.get("id"),
+           "document": rec.get("document") or rec.get("text"),
+           "metadata": merged}
+    if rec.get("embedding"):
+        out["embedding"] = rec["embedding"]
+    return out
 
 
 def friendly_source(meta: dict) -> str:
